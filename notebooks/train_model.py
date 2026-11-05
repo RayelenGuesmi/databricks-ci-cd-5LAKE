@@ -30,7 +30,9 @@ def main():
     accuracy = accuracy_score(y_test, y_pred)
 
     # Track experiment using MLflow
-    mlflow.set_experiment("Iris-RandomForest")
+    mlflow.set_experiment(
+    "/Users/rayelen.guesmi@supinfo.com/Iris-RandomForest"
+)
 
     with mlflow.start_run():
         mlflow.log_param("n_estimators", 100)
