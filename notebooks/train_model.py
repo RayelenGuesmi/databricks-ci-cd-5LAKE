@@ -41,8 +41,7 @@ def main():
     mlflow.sklearn.log_model(
         sk_model=model,
         name="random_forest_model",
-        serialization_format="skops",
-        skops_trusted_types=["sklearn.tree._tree.Tree"]
+        serialization_format="cloudpickle"
     )
 
     print(f"Model accuracy: {accuracy:.4f}")
