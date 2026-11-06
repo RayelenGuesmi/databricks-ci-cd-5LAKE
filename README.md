@@ -275,14 +275,14 @@ workspace.default.irisrfmodel_rayelen_5lake
 
 ### Validated Versions
 
-| Model version | Result |
+| Model Version | Result |
 |---|---|
-| Version 1 | Successfully registered after interactive Databricks execution |
-| Version 2 | Successfully registered after Databricks Job execution |
+| Version 1 | Registered after interactive Databricks execution |
+| Version 2 | Registered after successful Databricks Job execution |
+| Version 3 | Registered after an additional successful Job execution |
+| Version 4 | Registered after an additional successful Job execution |
 
-Unity Catalog provides centralized model registration and version management.
-
-The model signature specifies the expected input and prediction output structure.
+All four model versions were successfully registered and are visible in Unity Catalog.
 
 ## 11. Databricks Git Integration
 
