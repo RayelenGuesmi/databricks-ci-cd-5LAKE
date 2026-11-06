@@ -39,7 +39,7 @@ def main():
         "/Users/rayelen.guesmi@supinfo.com/Iris-RandomForest"
     )
 
-# Use Unity Catalog Model Registry in Databricks
+    # Use Unity Catalog Model Registry in Databricks
     if mlflow.get_tracking_uri().startswith("databricks"):
         mlflow.set_registry_uri("databricks-uc")
 
@@ -49,18 +49,17 @@ def main():
         mlflow.log_param("random_state", 42)
         mlflow.log_metric("accuracy", accuracy)
 
-    mlflow.sklearn.log_model(
-        sk_model=model,
-        name="random_forest_model",
-        serialization_format="cloudpickle",
-        signature=signature,
-        input_example=X_test[:5],
-        registered_model_name="workspace.default.IrisRFModel_Rayelen_5LAKE"
-    )   
+        mlflow.sklearn.log_model(
+            sk_model=model,
+            name="random_forest_model",
+            serialization_format="cloudpickle",
+            signature=signature,
+            input_example=X_test[:5],
+            registered_model_name="workspace.default.IrisRFModel_Rayelen_5LAKE"
+        )
 
     print(f"Model accuracy: {accuracy:.4f}")
     return accuracy
-
 
 if __name__ == "__main__":
     main()
