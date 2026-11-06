@@ -55,7 +55,7 @@ def main():
         serialization_format="cloudpickle",
         signature=signature,
         input_example=X_test[:5],
-        registered_model_name="workspace.default.IrisRFModel"
+        registered_model_name="workspace.default.IrisRFModel_Rayelen_5LAKE"
     )   
 
     print(f"Model accuracy: {accuracy:.4f}")
